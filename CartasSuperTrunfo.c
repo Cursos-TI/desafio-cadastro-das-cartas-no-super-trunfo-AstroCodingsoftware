@@ -2,22 +2,30 @@
 
 int main() {
 
-    int population, tourist; 
-    float zone, PIB;
+    int population, tourist, zone, PIB; 
+    float x,y;
 
     printf("==========>> Cadastro de cartas <<============\n\n");
+
 //entrada de dados
     printf("Coloque a população: ");
         scanf("%d", &population);
     printf("Coloque os pontos turisticos: ");
         scanf("%d", &tourist);
     printf("Coloque o PIB: ");
-        scanf("%f", &PIB);
+        scanf("%d", &PIB);
     printf("Coloque sua Zone: ");
-        scanf("%f", &zone);
+        scanf("%d", &zone);
+
+    x = (float) population / zone;
+    y = (float) PIB / population;
 
     // saida de dados
     printf("Seus dados são!\n\n");
-    printf("População:%d\nTuristicos:%d\nZona:%f\nPIB:%f\n", population, tourist, zone, PIB);
+
+    printf("População Media: %.3f\n", x);
+    printf("PIB da cidade: %.2f\n", y);
+    printf("Pontos turisticos: %d\n", tourist);
+
     return 0;
 };
